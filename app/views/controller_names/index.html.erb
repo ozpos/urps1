@@ -1,0 +1,23 @@
+<h1>Listing controller_names</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @controller_names.each do |controller_name| %>
+  <tr>
+    <td><%= controller_name.name %></td>
+    <td><%= link_to 'Show', controller_name %></td>
+    <td><%= link_to 'Edit', controller: :controller_actions, action: :edit_one_controller, :name_id => controller_name.id %></td>
+    <td><%= link_to 'Destroy', controller_name, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Controller name', new_controller_name_path %>

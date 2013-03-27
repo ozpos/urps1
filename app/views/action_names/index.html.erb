@@ -1,0 +1,23 @@
+<h1>Listing action_names</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @action_names.each do |action_name| %>
+  <tr>
+    <td><%= action_name.name %></td>
+    <td><%= link_to 'Show', action_name %></td>
+    <td><%= link_to 'Edit', edit_one_action_controller_actions_path(action_name) %></td>
+    <td><%= link_to 'Destroy', action_name, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Action name', new_action_name_path %>

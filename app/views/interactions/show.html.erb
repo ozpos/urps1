@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Controller name:</b>
+  <%= @interaction.controller_name %>
+</p>
+
+<p>
+  <b>Action name:</b>
+  <%= @interaction.action_name %>
+</p>
+
+
+<%= link_to 'Edit', edit_interaction_path(@interaction) %> |
+<%= link_to 'Back', interactions_path %>

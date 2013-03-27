@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  controller_name: 
+  action_name: 
+
+two:
+  controller_name: 
+  action_name: 

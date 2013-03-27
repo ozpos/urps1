@@ -1,0 +1,12 @@
+<div>
+    <h2><%= f.label r %></h2>
+    <%= f.fields_for :interactions, s.initialized_interactions() do |builder| %>
+        <% role = builder.object.role %>
+        <%= builder.hidden_field :role_id %>
+
+        <div class="field">
+            <%= builder.check_box :enable %>
+            <%= builder.label :enable, role.name %>
+        </div>
+    <% end %>
+</div>

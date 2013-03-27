@@ -1,0 +1,22 @@
+<%= form_for(@controller_name) do |f| %>
+  <% if @controller_name.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@controller_name.errors.count, "error") %> prohibited this controller_name from being saved:</h2>
+
+      <ul>
+      <% @controller_name.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+    <%= render "scoped_controller_actions", cas: @controller_actions, f: f %>
+    <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,22 @@
+<%= custom_form_for(@controller_action) do |f| %>
+  <% if @controller_action.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@controller_action.errors.count, "error") %> prohibited this controller_action from being saved:</h2>
+
+      <ul>
+      <% @controller_action.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+    <%= render 'user_roles', f: f, s: @controller_action, r: :roles %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

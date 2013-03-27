@@ -1,0 +1,12 @@
+<% cas.each do |ca| %>
+    <%= label_tag :name, "ControllerName " + ca.name %>
+    <%= f.fields_for :interactions, ca.initialized_interactions(ca.id) do |builder| %>
+        <% role = builder.object.role %>
+        <%= builder.hidden_field :role_id %>
+
+        <div class="field">
+          <%= builder.check_box :enable %>
+          <%= builder.label :enable, role.name %>
+        </div>
+    <% end %>
+<% end %>

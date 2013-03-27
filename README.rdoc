@@ -1,0 +1,43 @@
+== Welcome to Rails 3.2 Example Application
+
+This Example Application is intended to exercise a set of core use cases that one would expect to be easy to implement with the Rails web framework.
+
+I like many thousands of people were inspired by Rails when it first hit the streets with a demo called 'depot'.  That app simply blew me away.  I am not trying to recreate anything as complex or complete as that here, just something that works and which hopefully will become a metric that exposes the continuous improvement in DRY code clarity that each new version of Rails brings to us all.
+
+This is quite a terrifying experience for me since I have not really got to grips with using git or Rails 4.0 for that matter.  But with a helping hand perhaps we will get there.
+
+I was driven into this situation by the sheer agility of Rails development.  So Agile that I have been struggling to get a fairly simple set of use cases running under the current version of Rails before a new version was out and I had to start all over again.
+
+Please note that if some of the code looks like it came from another source then it probably did.  The majority will have originated from the free and fantastically clear  RailsCasts that Ryan Bates generously made available (in his words check it out).  My apologies if you recognise your own code and I have not given you a mention.  Also sorry to all you TDD people I come from a time well before TDD existed and find it difficult to work in that mode.
+
+
+=== Simple Use Cases
+
+* 1 Edit multi-level nested attributes in a single form.
+* 2 Edit several models on the same form.
+* 3 Edit multiple records from a single model on the same form.
+* 4 Email.
+* 5 Basic authentication.
+* 6 Digest authentication.
+* 7 User resource authorisation.
+
+=== Progress
+
+* 1 Done.
+* 2 Almost done. Displays but problem with update.
+
+
+== Installation
+
+Download, db:migrate and db:seed and away you go.
+
+
+
+
+
+
+
+
+
+
+

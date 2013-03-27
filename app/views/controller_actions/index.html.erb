@@ -1,0 +1,37 @@
+<%= form_tag( {action: :edit_multiple}, method: :post) do %>
+    <h1>Listing actions</h1>
+    <p>
+      <%= select_tag :actions, options_from_collection_for_select(@actions,:id, :name) %>
+      <%= submit_tag "Edit Action" %>
+    </p>
+    <h1>Listing controllers</h1>
+
+    <p>
+      <%= select_tag :controllers, options_from_collection_for_select(@controllers,:id, :name) %>
+      <%= submit_tag "Edit Controller" %>
+    </p>
+    <h1>Listing controller_actions</h1>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+      <% @controller_actions.each do |controller_action| %>
+          <tr>
+            <td><%= controller_action.name %></td>
+            <td><%= link_to 'Show', controller_action %></td>
+            <td><%= link_to 'Edit', edit_controller_action_path(controller_action) %></td>
+            <td><%= link_to 'Destroy', controller_action, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+      <% end %>
+    </table>
+
+<br />
+<% end %>
+
+<br />
+
+<%= link_to 'New Controller action', new_controller_action_path %>
